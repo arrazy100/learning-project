@@ -1,0 +1,102 @@
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+}
+
+.navbar-burger {
+    display: none;
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-logo a:hover,
+.navbar-logo a:focus,
+.navbar-logo a:active {
+    color: red;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu li {
+    padding: 1rem 1rem;
+    color: white;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    user-select: none;
+}
+
+.navbar-menu .active {
+    background-color: blue;
+}
+
+.navbar-menu li:hover,
+.navbar-menu li:focus,
+.navbar-menu li:active {
+    background-color: blue;
+    cursor: pointer;
+}
+
+@media (max-width: 40em) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-burger {
+        display: flex;
+        font-size: 1.5rem;
+        align-self: center;
+        padding: 0 1rem;
+        color: white;
+    }
+
+    .navbar-burger-open {
+        color: red;
+    }
+
+    .navbar-burger:hover,
+    .navbar-burger:focus,
+    .navbar-burger:active {
+        color: red;
+        cursor: pointer;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+}
